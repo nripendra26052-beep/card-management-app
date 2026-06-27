@@ -47,9 +47,9 @@ function App() {
       return
     }
 
-    // STRICT PRD ENFORCEMENT: Card spending limits cannot exceed a maximum ceiling of $50,000.
-    if (targetLimit > 50000) {
-      setValidationError('Security Exception: The requested limit allocation breaches the absolute $50,000 systemic constraint rule defined in docs/PRD.md.')
+    // STRICT PRD ENFORCEMENT: Card spending limits cannot exceed a maximum ceiling of $75,000.
+    if (targetLimit > 75000) {
+      setValidationError('Security Exception: The requested limit allocation breaches the absolute $75,000 systemic constraint rule defined in docs/PRD.md.')
       return
     }
 
@@ -65,7 +65,7 @@ function App() {
   }
 
   return (
-    <div className="flex min-h-screen bg-[#090d16] text-slate-100 font-sans antialiased selection:bg-blue-500/30 selection:text-blue-200">
+    <div className="flex min-h-screen bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 text-slate-100 font-sans antialiased selection:bg-blue-500/30 selection:text-blue-200">
       
       {/* 1. SIDEBAR PANEL */}
       <aside className="w-68 bg-[#0c1222] border-r border-slate-800/60 p-6 flex flex-col justify-between hidden md:flex">
@@ -163,7 +163,7 @@ function App() {
                 return (
                   <div 
                     key={card.id}
-                    className={`relative p-6 rounded-2xl border transition-all duration-300 shadow-2xl flex flex-col justify-between h-56 group overflow-hidden ${isBlocked ? 'bg-[#0b0f19]/80 border-slate-900 grayscale opacity-40 select-none' : 'bg-gradient-to-br from-[#161f38] via-[#11192e] to-[#0d1424] border-slate-800/80 hover:border-slate-700/80 hover:shadow-blue-950/10'}`}
+                    className={`relative p-6 rounded-2xl border transition-all duration-300 shadow-2xl flex flex-col justify-between h-56 group overflow-hidden ${isBlocked ? 'bg-[#0b0f19]/80 border-slate-900 grayscale opacity-50 select-none' : 'bg-gradient-to-br from-[#161f38] via-[#11192e] to-[#0d1424] border-slate-800/80 hover:border-slate-700/80 hover:shadow-blue-950/10'}`}
                   >
                     {/* Embedded Decorative Glassmorphism Light Reflection */}
                     <div className="absolute -right-20 -top-20 w-52 h-52 bg-blue-500/5 rounded-full blur-3xl group-hover:bg-blue-500/10 transition-colors duration-300 pointer-events-none" />
@@ -322,7 +322,7 @@ function App() {
               <div className="lg:col-span-2 bg-[#0c1222] border border-slate-800/60 p-5 rounded-2xl shadow-xl flex flex-col justify-between">
                 <div>
                   <h3 className="text-sm font-bold text-white mb-1">Threshold Parameter Allocation Form</h3>
-                  <p className="text-[11px] text-slate-500 mb-6 leading-relaxed">Adjust maximum systemic spending risk values. Form submission calls a parser loop that evaluates criteria strictly against the $50,000 regulatory PRD rule.</p>
+                  <p className="text-[11px] text-slate-500 mb-6 leading-relaxed">Adjust maximum systemic spending risk values. Form submission calls a parser loop that evaluates criteria strictly against the $75,000 regulatory PRD rule.</p>
                 </div>
 
                 <form onSubmit={handleUpdateLimit} className="space-y-4">
