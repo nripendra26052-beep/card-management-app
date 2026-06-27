@@ -47,9 +47,9 @@ function App() {
       return
     }
 
-    // STRICT PRD ENFORCEMENT: Card spending limits cannot exceed a maximum ceiling of $75,000.
-    if (targetLimit > 75000) {
-      setValidationError('Security Exception: The requested limit allocation breaches the absolute $75,000 systemic constraint rule defined in docs/PRD.md.')
+    // STRICT PRD ENFORCEMENT: Card spending limits cannot exceed a maximum ceiling of $90,000.
+    if (targetLimit > 90000) {
+      setValidationError('Security Exception: The requested limit allocation breaches the absolute $90,000 systemic constraint rule defined in docs/PRD.md.')
       return
     }
 
@@ -322,7 +322,7 @@ function App() {
               <div className="lg:col-span-2 bg-[#0c1222] border border-slate-800/60 p-5 rounded-2xl shadow-xl flex flex-col justify-between">
                 <div>
                   <h3 className="text-sm font-bold text-white mb-1">Threshold Parameter Allocation Form</h3>
-                  <p className="text-[11px] text-slate-500 mb-6 leading-relaxed">Adjust maximum systemic spending risk values. Form submission calls a parser loop that evaluates criteria strictly against the $75,000 regulatory PRD rule.</p>
+                  <p className="text-[11px] text-slate-500 mb-6 leading-relaxed">Adjust maximum systemic spending risk values. Form submission calls a parser loop that evaluates criteria strictly against the $90,000 regulatory PRD rule.</p>
                 </div>
 
                 <form onSubmit={handleUpdateLimit} className="space-y-4">
