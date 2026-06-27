@@ -13,9 +13,9 @@
 
 ## 3\. Data Constraints
 
-* **REGULATORY RISK CONSTRAINT UPDATE:** Card spending limits cannot exceed an absolute maximum ceiling of **$80,000**.
+* **REGULATORY RISK CONSTRAINT UPDATE:** Card spending limits cannot exceed an absolute maximum ceiling of **$90,000**.
 
 
 
-  *Systemic Verification Rule:* Any transaction or manual threshold input string that attempts to allocate a limit variable higher than $80,000 must be intercepted at the UI boundary layer, rejected, and throw a clear validation flag alert onto the user console interface.
+  *Systemic Verification Rule:* Any transaction or manual threshold input string that attempts to allocate a limit variable higher than $90,000 must be intercepted at the UI boundary layer, rejected, and throw a clear validation flag alert onto the user console interface.
 
